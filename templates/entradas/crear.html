@@ -1,0 +1,44 @@
+{% extends 'layouts/base.html' %} {% block title %} Crear usuario {% endblock %}
+{% block content %}
+<body>
+  
+    <div class="row justify-content-md-center mb-3">
+      <div class="col-md-10 m-5">
+        <div class="card" >
+          <div class="card-header text-center">
+            Crear Entrada
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"> </h5>
+
+            <form action="{{ url_for('entrada') }}" method="POST">
+              <div class="form-group">
+                <label for="titulo">Titulo de entrada</label>
+                <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Titulo de entrada" required/>
+              </div>
+              <div class="form-group">
+                <label for="descripcion">Descripcion de entrada</label>
+                <input type="text" id="descripcion" name="descripcion" class="form-control" placeholder="Descripcion de entrada" required/>
+              </div>
+              <div class="form-group">
+                <label for="autor">Autor</label>
+                <input type="text" id="autor" name="autor" class="form-control" placeholder="Nombre de autor" required/>
+              </div>
+                <div class="form-group text-center">
+                  <a href="{{ url_for('index') }}" class="btn btn-primary">Volver</a>
+
+                  <button type="submit" class="btn btn-success">Guardar</button>
+                </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+
+{% endblock %}
+
+
